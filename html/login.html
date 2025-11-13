@@ -5,54 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Hostel Management System</title>
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/auth.css">
+    <link rel="stylesheet" href="../styles/dark-login.css">
 </head>
 <body>
-    <div class="auth-container">
-        <div class="auth-card">
-            <div class="auth-header">
-                <h1>HostelHub Login</h1>
-                <p>Access your hostel management portal</p>
+    <div class="dark-auth-container">
+        <div class="dark-auth-card">
+            <div class="dark-auth-header">
+                <h1>HostelHub</h1>
+                <p>Access your portal in dark mode</p>
             </div>
 
-            <div class="role-selector">
-                <div class="role-option active" data-role="student">Student</div>
-                <div class="role-option" data-role="warden">Warden</div>
-                <div class="role-option" data-role="admin">Admin</div>
+            <div class="dark-role-selector">
+                <div class="dark-role-option active" data-role="student">
+                    <div>🎓</div>
+                    <span>Student</span>
+                </div>
+                <div class="dark-role-option" data-role="warden">
+                    <div>🏢</div>
+                    <span>Warden</span>
+                </div>
+                <div class="dark-role-option" data-role="admin">
+                    <div>⚡</div>
+                    <span>Admin</span>
+                </div>
             </div>
 
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="username">Username/Email</label>
-                    <input type="text" id="username" class="form-control" placeholder="Enter your username or email" required>
+            <form id="darkLoginForm">
+                <div class="dark-form-group">
+                    <label for="darkUsername">Username/Email</label>
+                    <input type="text" id="darkUsername" class="dark-form-control" placeholder="Enter your username or email" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                <div class="dark-form-group">
+                    <label for="darkPassword">Password</label>
+                    <input type="password" id="darkPassword" class="dark-form-control" placeholder="Enter your password" required>
                 </div>
 
-                <div class="form-group">
-                    <label>
-                        <input type="checkbox"> Remember me
+                <div class="dark-form-group">
+                    <label class="dark-checkbox">
+                        <input type="checkbox" id="rememberMe">
+                        Remember me
                     </label>
                 </div>
 
                 <input type="hidden" id="role" name="role" value="student">
-
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                <button type="submit" class="glow-btn" id="loginBtn">
+                    <span class="btn-text">Login to Portal</span>
+                </button>
             </form>
+            <div id="loginError" role="alert" style="display: none; margin-top: 1rem; color: #ef4444; text-align: center; font-size: 0.875rem;"></div>
 
-            <div id="loginError" role="alert" style="display: none; margin-top: 1rem; color: #d9534f;"></div>
-
-            <div class="auth-footer">
-                <p><a href="#">Forgot password?</a></p>
-                <p>Don't have an account? <a href="student-registration.html">Register here</a></p>
+            <div class="dark-auth-footer">
+                <p><a href="#" id="forgotPassword">Forgot your password?</a></p>
+                <p>New here? <a href="student-registration.html">Create account</a></p>
             </div>
         </div>
     </div>
 
     <script src="../js/init-data.js"></script>
     <script src="../js/auth.js"></script>
+    <script src="../js/dark-login.js"></script>
 </body>
 </html>
