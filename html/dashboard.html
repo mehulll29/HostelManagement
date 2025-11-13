@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hostel Management System</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar container">
+            <div class="logo">HostelHub</div>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="student-registration.html">Students</a></li>
+                <li><a href="room-allocation.html">Rooms</a></li>
+                <li><a href="fees-management.html">Fees</a></li>
+                <li><a href="complaints.html">Complaints</a></li>
+                <li><a href="leave-application.html">Leave</a></li>
+                <li><a href="mess-menu.html">Mess</a></li>
+            </ul>
+            <div class="user-menu">
+                <span>Welcome, John Doe</span>
+                <a href="login.html" class="btn btn-outline" style="color: white; border-color: white;">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Student Dashboard</h1>
+                <p>Welcome back! Here's your hostel overview</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">A-104</div>
+                    <div class="stat-label">Your Room</div>
+                </div>
+                <div class="stat-card success">
+                    <div class="stat-number">₹15,000</div>
+                    <div class="stat-label">Fee Paid</div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Pending Complaints</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Mess Attendance</div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card p-3">
+                    <h3>Recent Notices</h3>
+                    <div class="notice-list">
+                        <div class="notice-item">
+                            <strong>Hostel Fee Due</strong>
+                            <p>Last date for fee submission: 15th Dec 2024</p>
+                            <small>2 hours ago</small>
+                        </div>
+                        <div class="notice-item">
+                            <strong>Mess Menu Update</strong>
+                            <p>New menu effective from 1st December</p>
+                            <small>1 day ago</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-3">
+                    <h3>Quick Actions</h3>
+                    <div class="action-grid">
+                        <a href="leave-application.html" class="action-btn">Apply Leave</a>
+                        <a href="complaints.html" class="action-btn">Raise Complaint</a>
+                        <a href="fees-management.html" class="action-btn">Pay Fees</a>
+                        <a href="mess-menu.html" class="action-btn">Mark Attendance</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HostelHub Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
