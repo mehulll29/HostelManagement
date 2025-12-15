@@ -92,14 +92,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const user = AuthSystem.loginUser(identifier, password, role);
 
             if (user) {
-                const redirectMap = {
-                    student: 'dashboard.html',
-                    warden: 'dashboard.html',
-                    admin: 'dashboard.html'
-                };
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    
+    const redirectMap = {
+        student: './student-dashboard.html',
+        admin: './admin-dashboard.html'
+    };
 
-                const redirectTarget = redirectMap[role] || 'dashboard.html';
-                window.location.href = redirectTarget;
+    const redirectTarget = redirectMap[user.role] || './student-dashboard.html';
+    window.location.href = redirectTarget;
+
+           
             } else if (loginError) {
                 loginError.textContent = 'Invalid credentials for the selected role.';
                 loginError.style.display = 'block';

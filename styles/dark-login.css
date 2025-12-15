@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #2d2d2d 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #3a3a3a 100%);
     padding: 20px;
     position: relative;
     overflow: hidden;
@@ -71,7 +71,7 @@
 }
 
 .dark-auth-header h1 {
-    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    background: linear-gradient(135deg, var(--logo-color), var(--primary-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -81,7 +81,7 @@
 }
 
 .dark-auth-header p {
-    color: #94a3b8;
+    color: #cbd5e1;
     font-size: 1.1rem;
 }
 
@@ -95,27 +95,27 @@
 
 .dark-role-option {
     padding: 1rem 0.5rem;
-    border: 2px solid #374151;
+    border: 2px solid #4b5563;
     border-radius: 0.75rem;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: rgba(55, 65, 81, 0.3);
-    color: #d1d5db;
+    background: rgba(55, 65, 81, 0.4);
+    color: #e5e7eb;
     font-weight: 500;
 }
 
 .dark-role-option:hover {
-    border-color: #8b5cf6;
-    background: rgba(139, 92, 246, 0.1);
+    border-color: var(--logo-color);
+    background: rgba(var(--logo-rgb), 0.08);
     transform: translateY(-2px);
 }
 
 .dark-role-option.active {
-    border-color: #3b82f6;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
-    color: #60a5fa;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    border-color: var(--logo-color);
+    background: linear-gradient(135deg, rgba(var(--logo-rgb), 0.2), rgba(var(--logo-rgb), 0.1));
+    color: var(--primary-light);
+    box-shadow: 0 0 20px rgba(var(--logo-rgb), 0.3);
 }
 
 /* Dark Form Styles */
@@ -127,7 +127,7 @@
     display: block;
     margin-bottom: 0.75rem;
     font-weight: 600;
-    color: #e5e7eb;
+    color: #f3f4f6;
     font-size: 0.95rem;
 }
 
@@ -169,10 +169,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    background: linear-gradient(135deg, var(--logo-color), var(--primary-light));
     color: white;
     box-shadow: 
-        0 4px 15px 0 rgba(139, 92, 246, 0.3),
+        0 4px 15px 0 rgba(var(--logo-rgb), 0.3),
         0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
@@ -194,10 +194,10 @@
 .glow-btn:hover {
     transform: translateY(-3px);
     box-shadow: 
-        0 8px 25px 0 rgba(139, 92, 246, 0.5),
+        0 8px 25px 0 rgba(var(--logo-rgb), 0.5),
         0 0 0 1px rgba(255, 255, 255, 0.2),
-        0 0 30px rgba(59, 130, 246, 0.4);
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        0 0 30px rgba(var(--logo-rgb), 0.4);
+    background: linear-gradient(135deg, var(--primary-light), var(--logo-color));
 }
 
 .glow-btn:active {
@@ -209,7 +209,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: #d1d5db;
+    color: #e5e7eb;
     font-weight: 500;
 }
 
@@ -238,7 +238,7 @@
 
 .dark-auth-footer p {
     margin-bottom: 0.75rem;
-    color: #94a3b8;
+    color: #cbd5e1;
 }
 
 .dark-auth-footer a {
@@ -256,7 +256,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #60a5fa, #8b5cf6);
+    background: linear-gradient(90deg, var(--primary-light), var(--logo-color));
     transition: width 0.3s ease;
 }
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration - Hostel Management System</title>
+    <title>Student Registration - HostelHub</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/forms.css">
@@ -14,16 +14,15 @@
             <div class="logo">HostelHub</div>
             <button class="mobile-menu-btn">☰</button>
             <ul class="nav-links">
-                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
                 <li><a href="student-registration.html" class="active">Students</a></li>
                 <li><a href="room-allocation.html">Rooms</a></li>
-                <li><a href="fees-management.html">Fees</a></li>
-                <li><a href="complaints.html">Complaints</a></li>
-                <li><a href="leave-application.html">Leave</a></li>
+                <li><a href="admin-complaints.html">Complaints</a></li>
+                <li><a href="leave-management.html">Leave</a></li>
                 <li><a href="mess-menu.html">Mess</a></li>
             </ul>
             <div class="user-menu">
-                <span>Welcome, Admin</span>
+                <span id="adminName">Welcome, Admin</span>
                 <a href="login.html" class="btn btn-outline" style="color: white; border-color: white;">Logout</a>
             </div>
         </nav>
@@ -37,88 +36,119 @@
             </div>
 
             <form id="studentRegistrationForm">
-            <div class="form-section">
-                <h2>Personal Information</h2>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fullName">Full Name *</label>
-                        <input type="text" id="fullName" class="form-control" required>
+                <div class="form-section">
+                    <h2>Personal Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth *</label>
+                            <input type="date" id="dateOfBirth" class="form-control" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="rollNumber">Roll Number *</label>
-                        <input type="text" id="rollNumber" class="form-control" required>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" pattern="[6-9]\d{9}" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password">Password *</label>
+                            <input type="password" id="password" class="form-control" required minlength="6">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password *</label>
+                            <input type="password" id="confirmPassword" class="form-control" required>
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" class="form-control" required>
+                <div class="form-section">
+                    <h2>Academic Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="collegeName">College Name *</label>
+                            <input type="text" id="collegeName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course *</label>
+                            <select id="course" class="form-control" required>
+                                <option value="">Select Course</option>
+                                <option value="btech">B.Tech</option>
+                                <option value="mtech">M.Tech</option>
+                                <option value="mba">MBA</option>
+                                <option value="bca">BCA</option>
+                                <option value="bsc">B.Sc</option>
+                                <option value="msc">M.Sc</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" class="form-control" required>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="semester">Semester *</label>
+                            <select id="semester" class="form-control" required>
+                                <option value="">Select Semester</option>
+                                <option value="1">1st Semester</option>
+                                <option value="2">2nd Semester</option>
+                                <option value="3">3rd Semester</option>
+                                <option value="4">4th Semester</option>
+                                <option value="5">5th Semester</option>
+                                <option value="6">6th Semester</option>
+                                <option value="7">7th Semester</option>
+                                <option value="8">8th Semester</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="rollNumber">Roll Number *</label>
+                            <input type="text" id="rollNumber" class="form-control" required>
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-row">
+                <div class="form-section">
+                    <h2>Parent/Guardian Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fatherName">Father's Name *</label>
+                            <input type="text" id="fatherName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fatherPhone">Father's Phone *</label>
+                            <input type="tel" id="fatherPhone" class="form-control" pattern="[6-9]\d{9}" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Room Allocation</h2>
                     <div class="form-group">
-                        <label for="course">Course *</label>
-                        <select id="course" class="form-control" required>
-                            <option value="">Select Course</option>
-                            <option value="btech">B.Tech</option>
-                            <option value="mtech">M.Tech</option>
-                            <option value="mba">MBA</option>
-                            <option value="bca">BCA</option>
+                        <label for="roomPreference">Room Preference *</label>
+                        <select id="roomPreference" class="form-control" required>
+                            <option value="">Select Room Type</option>
+                            <option value="AC">AC Room</option>
+                            <option value="Non-AC">Non-AC Room</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="year">Year *</label>
-                        <select id="year" class="form-control" required>
-                            <option value="">Select Year</option>
-                            <option value="1">1st Year</option>
-                            <option value="2">2nd Year</option>
-                            <option value="3">3rd Year</option>
-                            <option value="4">4th Year</option>
-                        </select>
+                    <div id="availableRooms" class="rooms-grid" style="display: none;">
+                        <h4>Available Rooms</h4>
+                        <div id="roomsList" class="rooms-list"></div>
                     </div>
                 </div>
-            </div>
 
-            <div class="form-section">
-                <h2>Parent/Guardian Information</h2>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="parentName">Parent/Guardian Name *</label>
-                        <input type="text" id="parentName" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="parentPhone">Parent Phone *</label>
-                        <input type="tel" id="parentPhone" class="form-control" required>
-                    </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline" onclick="window.location.href='admin-dashboard.html'">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Register Student</button>
                 </div>
-                <div class="form-group">
-                    <label for="parentAddress">Parent Address *</label>
-                    <textarea id="parentAddress" class="form-control" rows="3" required></textarea>
-                </div>
-            </div>
-
-            <div class="form-section">
-                <h2>Medical Information</h2>
-                <div class="form-group">
-                    <label for="medicalHistory">Medical History</label>
-                    <textarea id="medicalHistory" class="form-control" rows="3" placeholder="Any known medical conditions or allergies"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="emergencyContact">Emergency Contact *</label>
-                    <input type="text" id="emergencyContact" class="form-control" required>
-                </div>
-            </div>
-
-            <div class="form-actions">
-                <button type="button" class="btn btn-outline">Cancel</button>
-                <button type="submit" class="btn btn-primary">Register Student</button>
-            </div>
             </form>
         </div>
     </main>

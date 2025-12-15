@@ -1,16 +1,50 @@
+/* forms.css - Form Elements and Layout */
 .form-section {
-    background: white;
+    background: var(--bg-card);
     border-radius: 0.75rem;
     box-shadow: var(--shadow);
     padding: 2rem;
     margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
 }
 
 .form-section h2 {
-    color: var(--gray-800);
+    color: var(--text-primary);
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--gray-100);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: var(--bg-input);
+    color: var(--text-primary);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(var(--logo-rgb), 0.08);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
 }
 
 .form-row {
@@ -35,11 +69,17 @@
 }
 
 .room-card {
-    background: white;
+    background: var(--bg-card);
     border-radius: 0.75rem;
     box-shadow: var(--shadow);
     padding: 1.5rem;
-    border: 2px solid var(--gray-200);
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.room-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
 }
 
 .room-card.occupied {
@@ -47,12 +87,12 @@
 }
 
 .room-card.vacant {
-    border-color: var(--gray-300);
+    border-color: var(--border-light);
 }
 
 .room-header {
     display: flex;
-    justify-content: between;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
 }
@@ -76,12 +116,14 @@
 }
 
 .status-vacant {
-    background-color: var(--gray-300);
-    color: var(--gray-700);
+    background-color: var(--border-light);
+    color: var(--text-primary);
 }
 
 .beds-list {
-    space-y: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .bed-item {
@@ -89,12 +131,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem;
-    background: var(--gray-50);
+    background: var(--bg-secondary);
     border-radius: 0.5rem;
 }
 
 .bed-occupied {
-    background: var(--primary-light);
+    background: rgba(var(--logo-rgb), 0.06);
 }
 
 /* Mess Menu Styles */
@@ -105,17 +147,23 @@
 }
 
 .day-card {
-    background: white;
+    background: var(--bg-card);
     border-radius: 0.75rem;
     box-shadow: var(--shadow);
     padding: 1.5rem;
+    transition: var(--transition);
+}
+
+.day-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
 }
 
 .day-header {
     text-align: center;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--gray-100);
+    border-bottom: 2px solid var(--border-color);
 }
 
 .day-header h3 {
@@ -127,7 +175,7 @@
 }
 
 .meal-section h4 {
-    color: var(--gray-700);
+    color: var(--text-secondary);
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -135,7 +183,7 @@
 }
 
 .meal-items {
-    color: var(--gray-600);
+    color: var(--text-muted);
 }
 
 .attendance-toggle {
@@ -165,7 +213,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--gray-300);
+    background-color: var(--border-light);
     transition: .4s;
     border-radius: 24px;
 }
@@ -190,7 +238,6 @@ input:checked + .toggle-slider:before {
     transform: translateX(26px);
 }
 
-/* Responsive Forms */
 @media (max-width: 768px) {
     .form-section {
         padding: 1rem;
@@ -212,4 +259,50 @@ input:checked + .toggle-slider:before {
     .mess-menu {
         grid-template-columns: 1fr;
     }
+}
+/* Add to forms.css */
+.rooms-grid {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(var(--logo-rgb), 0.04);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(var(--logo-rgb), 0.16);
+}
+
+.rooms-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.room-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 2px solid #374151;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.room-option:hover {
+    border-color: var(--primary);
+    background: rgba(var(--logo-rgb), 0.08);
+}
+
+.room-option input[type="radio"]:checked + label {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.room-option label {
+    cursor: pointer;
+    margin: 0;
+}
+
+.room-option strong {
+    display: block;
+    margin-bottom: 0.25rem;
 }

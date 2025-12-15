@@ -108,9 +108,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         btnText.textContent = 'Login Successful!';
                         showNotification('Login successful! Redirecting...', 'success');
                         
-                        // Redirect after success animation
+                        // Redirect based on role
+                        const redirectMap = {
+                            student: './student-dashboard.html',
+                            admin: './admin-dashboard.html'
+                        };
+                        
+                        const redirectTarget = redirectMap[user.role] || './student-dashboard.html';
+                        
                         setTimeout(() => {
-                            window.location.href = 'dashboard.html';
+                            window.location.href = redirectTarget;
                         }, 1000);
                     } else {
                         // Login failed

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - HostelHub</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/forms.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar container">
+            <div class="logo">HostelHub</div>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="student-profile.html">Profile</a></li>
+                <li><a href="complaint-status.html">Complaints</a></li>
+                <li><a href="leave-status.html">Leave Status</a></li>
+                <li><a href="mess-menu.html">Mess</a></li>
+            </ul>
+            <div class="user-menu">
+                <span id="studentName">Welcome, Student</span>
+                <a href="login.html" class="btn btn-outline" style="color: white; border-color: white;">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Student Dashboard</h1>
+                <p>Welcome back! Here's your hostel overview</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="studentRoom">-</div>
+                    <div class="stat-label">Your Room</div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-number" id="pendingComplaints">0</div>
+                    <div class="stat-label">Pending Complaints</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="leaveBalance">0</div>
+                    <div class="stat-label">Leave Balance</div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card p-3">
+                    <h3>Recent Notices</h3>
+                    <div class="notice-list" id="noticeList">
+                        <!-- Notices will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="card p-3">
+                    <h3>Quick Actions</h3>
+                    <div class="action-grid">
+                        <button class="action-btn" id="applyLeaveBtn">Apply Leave</button>
+                        <button class="action-btn" id="raiseComplaintBtn">Raise Complaint</button>
+                        <a href="mess-menu.html" class="action-btn">Mess Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Leave Application Modal -->
+    <div id="leaveModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Apply for Leave</h3>
+            <form id="leaveForm">
+                <div class="form-group">
+                    <label for="fromDate">From Date *</label>
+                    <input type="date" id="fromDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="toDate">To Date *</label>
+                    <input type="date" id="toDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destination *</label>
+                    <input type="text" id="destination" class="form-control" placeholder="Where are you going?" required>
+                </div>
+                <div class="form-group">
+                    <label for="reason">Reason for Leave *</label>
+                    <textarea id="reason" class="form-control" rows="3" placeholder="Please specify the reason for leave" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="parentContact">Parent Contact Number *</label>
+                    <input type="tel" id="parentContact" class="form-control" pattern="[6-9]\d{9}" placeholder="Parent's phone number" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline" id="cancelLeave">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit Leave</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Complaint Modal -->
+    <div id="complaintModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Raise Complaint</h3>
+            <form id="complaintForm">
+                <div class="form-group">
+                    <label for="complaintTitle">Title *</label>
+                    <input type="text" id="complaintTitle" class="form-control" placeholder="Brief title of your complaint" required>
+                </div>
+                <div class="form-group">
+                    <label for="complaintCategory">Category *</label>
+                    <select id="complaintCategory" class="form-control" required>
+                        <option value="">Select Category</option>
+                        <option value="plumbing">Plumbing</option>
+                        <option value="electrical">Electrical</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="internet">Internet</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="complaintPriority">Priority *</label>
+                    <select id="complaintPriority" class="form-control" required>
+                        <option value="">Select Priority</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                        <option value="urgent">Urgent</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="complaintDescription">Description *</label>
+                    <textarea id="complaintDescription" class="form-control" rows="4" placeholder="Please describe your complaint in detail..." required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline" id="cancelComplaint">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit Complaint</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HostelHub Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/student-dashboard.js"></script>
+</body>
+</html>

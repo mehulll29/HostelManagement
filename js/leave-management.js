@@ -24,13 +24,13 @@ class LeaveSystem {
         return leave;
     }
     
-    static approveLeave(leaveId, wardenId) {
+    static approveLeave(leaveId, adminId) {
         const leaves = JSON.parse(localStorage.getItem('leaves')) || [];
         const leave = leaves.find(l => l.id === leaveId);
         
         if (leave) {
             leave.status = 'approved';
-            leave.approvedBy = wardenId;
+            leave.approvedBy = adminId;
             leave.gatePass = `GP${Date.now()}`;
             
             localStorage.setItem('leaves', JSON.stringify(leaves));
