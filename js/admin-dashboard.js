@@ -11,7 +11,7 @@ class AdminDashboard {
         document.getElementById('pendingComplaints').textContent = 
             complaints.filter(c => c.status === 'submitted').length;
         document.getElementById('pendingLeaves').textContent = 
-            leaves.filter(l => l.status === 'pending').length;
+            this.getCurrentLeaveCount(leaves);
         document.getElementById('occupiedRooms').textContent = 
             rooms.reduce((total, room) => total + room.occupiedBeds, 0);
         
@@ -49,6 +49,17 @@ class AdminDashboard {
         if (recentComplaints.length === 0) {
             recentComplaintsDiv.innerHTML = '<p>No complaints found</p>';
         }
+    }
+    
+    static getCurrentLeaveCount(leaves) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        return leaves.filter(leave => {
+            const fromDate = new Date(leave.fromDate);
+            const toDate = new Date(leave.toDate);
+            return today >= fromDate && today <= toDate;
+        }).length;
     }
 }
 

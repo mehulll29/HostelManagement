@@ -46,6 +46,21 @@ document.addEventListener('DOMContentLoaded', function() {
         registrationForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Validate age (must be 18 or above)
+            const dateOfBirth = new Date(document.getElementById('dateOfBirth').value);
+            const today = new Date();
+            const age = today.getFullYear() - dateOfBirth.getFullYear();
+            const monthDiff = today.getMonth() - dateOfBirth.getMonth();
+            
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dateOfBirth.getDate())) {
+                age--;
+            }
+            
+            if (age < 18) {
+                alert('You must be at least 18 years old to register!');
+                return;
+            }
+            
             // Validate passwords match
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;

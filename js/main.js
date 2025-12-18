@@ -15,6 +15,22 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.classList.remove('active');
         }
     });
+
+    // Logout functionality
+    const logoutLinks = document.querySelectorAll('a[href="login.html"]');
+    logoutLinks.forEach(link => {
+        const linkText = link.textContent.trim().toLowerCase();
+        if (linkText === 'logout') {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (typeof AuthSystem !== 'undefined') {
+                    AuthSystem.logout();
+                }
+                localStorage.removeItem('currentUser');
+                window.location.href = 'login.html';
+            });
+        }
+    });
 });
 
 // Form validation helper

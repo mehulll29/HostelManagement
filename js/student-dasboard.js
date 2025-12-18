@@ -38,11 +38,9 @@ class StudentDashboard {
             );
             document.getElementById('pendingComplaints').textContent = pendingComplaints.length;
             
-            // Leave balance (simplified - you can enhance this)
-            const approvedLeaves = leaves.filter(l => 
-                l.studentId === currentUser.id && l.status === 'approved'
-            );
-            document.getElementById('leaveBalance').textContent = approvedLeaves.length;
+            // Leave balance (count of applied leaves)
+            const totalLeaves = leaves.filter(l => l.studentId === currentUser.id);
+            document.getElementById('leaveBalance').textContent = totalLeaves.length;
         }
     }
 

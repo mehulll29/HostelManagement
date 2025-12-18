@@ -47,9 +47,9 @@ class AuthSystem {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const roleOptions = document.querySelectorAll('.role-option');
+    const roleOptions = document.querySelectorAll('.dark-role-option');
     const roleInput = document.getElementById('role');
-    const loginForm = document.getElementById('loginForm');
+    const loginForm = document.getElementById('darkLoginForm');
     const loginError = document.getElementById('loginError');
 
     let selectedRole = roleInput ? roleInput.value : 'student';
@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
         loginForm.addEventListener('submit', event => {
             event.preventDefault();
 
-            const identifierInput = document.getElementById('username');
-            const passwordInput = document.getElementById('password');
+            const identifierInput = document.getElementById('darkUsername');
+            const passwordInput = document.getElementById('darkPassword');
 
             const identifier = identifierInput ? identifierInput.value.trim() : '';
             const password = passwordInput ? passwordInput.value : '';
