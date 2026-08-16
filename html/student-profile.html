@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - HostelHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/student-profile.css"> 
+</head>
+<body>
+    <header>
+        <nav class="navbar container">
+            <div class="logo">HostelHub</div>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="student-dashboard.html">Dashboard</a></li>
+                <li><a href="student-profile.html" class="active">Profile</a></li>
+                <li><a href="student-complaints.html">My Complaints</a></li>
+                <li><a href="leave-request.html">Apply Leave</a></li>
+                <li><a href="mess-menu.html">Mess Menu</a></li>
+            </ul>
+            <div class="user-menu">
+                <span id="studentName">Welcome, Student!</span>
+                <a href="login.html" class="btn btn-outline" style="color: white; border-color: white;">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container profile-container">
+            <div class="profile-header-card">
+                <h1 id="profileHeader">Loading Student Profile...</h1>
+                <p>Welcome back! Here are your registered hostel details.</p>
+            </div>
+            
+            <div id="profile-content">
+                </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HostelHub Management System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/student-profile.js"></script> 
+</body>
+</html>

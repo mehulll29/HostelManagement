@@ -1,0 +1,155 @@
+/* student-profile.css */
+
+.profile-container {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.profile-header-card {
+    background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.profile-header-card h1 {
+    font-size: 2.2rem;
+    color: var(--primary-light);
+    margin-bottom: 0.5rem;
+}
+
+.profile-header-card p {
+    color: var(--text-muted);
+}
+
+.profile-section {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.profile-section h2 {
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Icons for headers - Assuming you use Font Awesome (FAS) */
+.profile-section h2 i {
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+.profile-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed rgba(var(--logo-rgb), 0.1);
+}
+
+.profile-detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    flex-basis: 40%; /* Space for the label */
+}
+
+.detail-value {
+    font-weight: 400;
+    color: var(--text-primary);
+    text-align: right;
+    flex-basis: 60%; /* Space for the value */
+}
+
+.important-value {
+    font-weight: 600;
+    color: var(--primary-light); /* Highlight key info */
+}
+
+.status-active {
+    background-color: var(--success);
+    color: var(--bg-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+/* Alert for missing profile */
+.alert {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    border: 1px solid transparent;
+}
+
+.alert-danger {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+.alert-danger h3 {
+    margin-bottom: 0.5rem;
+    color: var(--danger);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.alert a {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profile-header-card {
+        padding: 1.5rem;
+    }
+
+    .profile-detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.75rem 0;
+    }
+    
+    .detail-label {
+        margin-bottom: 0.25rem;
+    }
+
+    .detail-value {
+        text-align: left;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}

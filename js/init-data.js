@@ -8,14 +8,26 @@ function initializeSampleData() {
             } else {
                 // create a minimal default rooms array to avoid blocking later logic
                 const defaultRooms = [
-                    { number: 'A-101', type: 'single', capacity: 10, occupiedBeds: 0 },
-                    { number: 'A-102', type: 'double', capacity: 20, occupiedBeds: 0 },
-                    { number: 'A-103', type: 'single', capacity: 20, occupiedBeds: 0 },
-                    { number: 'A-104', type: 'double', capacity: 10, occupiedBeds: 0 },
-                    { number: 'NA-102', type: 'double', capacity: 15, occupiedBeds: 0 },
-                    { number: 'NA-102', type: 'double', capacity: 20, occupiedBeds: 0 }
+                    { number: 'A-101', type: 'single', capacity: 1, occupiedBeds: 0 },
+                    { number: 'A-102', type: 'double', capacity: 2, occupiedBeds: 0 }
                 ];
                 localStorage.setItem('rooms', JSON.stringify(defaultRooms));
+            }
+        } else {
+            // Migrate old room types if necessary
+            const rooms = JSON.parse(localStorage.getItem('rooms'));
+            let updated = false;
+            rooms.forEach(room => {
+                if (room.type === 'single') {
+                    room.type = 'AC';
+                    updated = true;
+                } else if (room.type === 'double') {
+                    room.type = 'Non-AC';
+                    updated = true;
+                }
+            });
+            if (updated) {
+                localStorage.setItem('rooms', JSON.stringify(rooms));
             }
         }
     } catch (err) {
@@ -85,10 +97,8 @@ function initializeSampleData() {
                 destination: 'Home Town',
                 reason: 'Family function',
                 parentContact: '+919876543210',
-                status: 'pending',
-                appliedDate: new Date().toISOString(),
-                approvedBy: null,
-                gatePass: null
+                status: 'active',
+                appliedDate: new Date().toISOString()
             }
         ];
         localStorage.setItem('leaves', JSON.stringify(sampleLeaves));

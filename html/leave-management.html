@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leave Management - HostelHub</title>
+    <title>Leave Records - HostelHub</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/components.css">
     <link rel="stylesheet" href="../styles/forms.css">
@@ -18,7 +18,7 @@
                 <li><a href="student-registration.html">Students</a></li>
                 <li><a href="room-allocation.html">Rooms</a></li>
                 <li><a href="admin-complaints.html">Complaints</a></li>
-                <li><a href="leave-management.html" class="active">Leave</a></li>
+                <li><a href="leave-management.html" class="active">Leave Records</a></li>
                 <li><a href="mess-menu.html">Mess</a></li>
             </ul>
             <div class="user-menu">
@@ -31,8 +31,8 @@
     <main class="main-content">
         <div class="container">
             <div class="page-header">
-                <h1>Leave Management</h1>
-                <p>Manage student leave applications</p>
+                <h1>Leave Records</h1>
+                <p>View all student leave applications and current leave status</p>
             </div>
 
             <div class="card p-3">
@@ -49,7 +49,7 @@
                                 <th>Reason</th>
                                 <th>Status</th>
                                 <th>Applied Date</th>
-                                <th>Actions</th>
+                                <th>Parent Contact</th>
                             </tr>
                         </thead>
                         <tbody id="leavesTableBody">
@@ -68,6 +68,7 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/init-data.js"></script>
     <script src="../js/admin-leave-management.js"></script>
 </body>
 </html>
