@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "6a6c33d2ed05ba606090fb0e",
+    "student": "6a6c33d2ed05ba606090fb01",
+    "title": "AC Remote Not Working",
+    "category": "Electrical",
+    "description": "The AC remote in Room A-101 display is faded and buttons unresponsive.",
+    "priority": "medium",
+    "status": "pending",
+    "resolutionNote": "",
+    "resolutionDate": null,
+    "createdAt": "2026-07-31T05:34:10.913Z",
+    "updatedAt": "2026-07-31T05:34:10.913Z",
+    "__v": 0
+  }
+]

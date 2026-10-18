@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "6a6c36bded05ba606090fc00",
+    "student": "6a6c33d2ed05ba606090fb01",
+    "reason": "family function ",
+    "startDate": "2026-08-02T00:00:00.000Z",
+    "endDate": "2026-08-06T00:00:00.000Z",
+    "status": "approved",
+    "adminRemark": "",
+    "createdAt": "2026-07-31T05:46:37.919Z",
+    "updatedAt": "2026-07-31T05:47:26.983Z",
+    "__v": 0
+  }
+]

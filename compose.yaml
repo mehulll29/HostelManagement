@@ -1,0 +1,25 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+    expose:
+      - "5000"
+    networks:
+      - hostel-network
+
+  frontend:
+    build:
+      context: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    networks:
+      - hostel-network
+
+networks:
+  hostel-network:
+    driver: bridge

@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "6a6c33d2ed05ba606090fb05",
+    "day": "Monday",
+    "breakfast": "Poha, Sev, Tea / Coffee",
+    "lunch": "Roti, Paneer Masala, Dal Fry, Jeera Rice",
+    "snacks": "Samosa, Mint Chutney, Tea",
+    "dinner": "Roti, Mix Veg, Rice, Gulab Jamun",
+    "__v": 0,
+    "createdAt": "2026-07-31T05:34:10.908Z",
+    "updatedAt": "2026-07-31T05:34:10.908Z"
+  },
+  {
+    "_id": "6a6c33d2ed05ba606090fb06",
+    "day": "Tuesday",
+    "breakfast": "Idli Sambhar, Coconut Chutney",
+    "lunch": "Roti, Chana Masala, Rice, Salad",
+    "snacks": "Biscuits, Tea",
+    "dinner": "Roti, Aloo Gobi, Rice, Dal",
+    "__v": 0,
+    "createdAt": "2026-07-31T05:34:10.908Z",
+    "updatedAt": "2026-07-31T05:34:10.908Z"
+  },
+  {
+    "_id": "6a6c33d2ed05ba606090fb07",
+    "day": "Wednesday",
+    "breakfast": "Aloo Paratha, Curd, Pickle",
+    "lunch": "Roti, Rajma, Veg Pulav, Boondi Raita",
+    "snacks": "Vada Pav, Tea",
+    "dinner": "Roti, Kadhai Paneer, Rice, Ice Cream",
+    "__v": 0,
+    "createdAt": "2026-07-31T05:34:10.908Z",
+    "updatedAt": "2026-07-31T05:34:10.908Z"
+  },
+  {
+    "_id": "6a6c33d2ed05ba606090fb08",
+    "day": "Thursday",
+    "breakfast": "Upma, Tea / Coffee",
+    "lunch": "Roti, Bhindi Fry, Dal Tadka, Rice",
+    "snacks": "Pakoda, Green Chutney",
+    "dinner": "Roti, Sev Tamatar, Rice, Suji Halwa",
+    "__v": 0,
+    "createdAt": "2026-07-31T05:34:10.908Z",
+    "updatedAt": "2026-07-31T05:34:10.908Z"
+  },
+  {
+    "_id": "6a6c33d2ed05ba606090fb09",
+    "day": "Friday",
+    "breakfast": "Uttapam, Sambhar",
+    "lunch": "Roti, Egg Curry / Paneer, Rice, Salad",
+    "snacks": "Sandwich, Tea",
+    "dinner": "Special Veg Biryani, Raita, Rasgulla",
+    "__v": 0,
+    "createdAt": "2026-07-31T05:34:10.908Z",
+    "updatedAt": "2026-07-31T05:34:10.908Z"
+  },
+  {
+    "_id": "6a6c33d2ed05ba606090fb0a",
+    "day": "Saturday",
+    "breakfast": "Puri Bhaji, Tea",
+    "lunch": "Roti, Dal Makhani, Veg Pulao, Curd",
+    "snacks": "Bhel Puri, Tea",
+    "dinner": "Roti, Malai Kofta, Rice, Kheer",
+    "__v": 0,
+    "createdAt": "2026-07-31T05:34:10.908Z",
+    "updatedAt": "2026-07-31T05:34:10.908Z"
+  },
+  {
+    "_id": "6a6c33d2ed05ba606090fb0b",
+    "day": "Sunday",
+    "breakfast": "Masala Dosa, Sambhar",
+    "lunch": "Special Sunday Thali, Sweet, Ice Cream",
+    "snacks": "French Fries, Coffee",
+    "dinner": "Roti, Dal Khichdi, Kadhi, Papad",
+    "__v": 0,
+    "createdAt": "2026-07-31T05:34:10.908Z",
+    "updatedAt": "2026-07-31T05:34:10.908Z"
+  }
+]

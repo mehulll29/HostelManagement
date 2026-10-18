@@ -1,0 +1,31 @@
+{
+  "database": "hostel_management",
+  "exportedAt": "2026-10-18T14:45:26.631Z",
+  "collections": {
+    "messmenus": {
+      "count": 7,
+      "file": "messmenus.json",
+      "indexCount": 2
+    },
+    "complaints": {
+      "count": 1,
+      "file": "complaints.json",
+      "indexCount": 1
+    },
+    "users": {
+      "count": 2,
+      "file": "users.json",
+      "indexCount": 2
+    },
+    "leaves": {
+      "count": 1,
+      "file": "leaves.json",
+      "indexCount": 1
+    },
+    "rooms": {
+      "count": 4,
+      "file": "rooms.json",
+      "indexCount": 2
+    }
+  }
+}

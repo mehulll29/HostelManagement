@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "dump-db": "node export-local-db.js",
+    "migrate-atlas": "node migrate-to-atlas.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

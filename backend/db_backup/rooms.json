@@ -1,0 +1,56 @@
+[
+  {
+    "_id": "6a6c33d2ed05ba606090fafb",
+    "number": "A-101",
+    "block": "A Block",
+    "type": "AC",
+    "capacity": 2,
+    "occupiedBeds": 1,
+    "occupants": [
+      "6a6c33d2ed05ba606090fb01"
+    ],
+    "status": "available",
+    "__v": 1,
+    "createdAt": "2026-07-31T05:34:10.816Z",
+    "updatedAt": "2026-07-31T05:34:10.894Z"
+  },
+  {
+    "_id": "6a6c33d2ed05ba606090fafc",
+    "number": "A-102",
+    "block": "A Block",
+    "type": "Non-AC",
+    "capacity": 2,
+    "occupiedBeds": 0,
+    "occupants": [],
+    "status": "available",
+    "__v": 0,
+    "createdAt": "2026-07-31T05:34:10.816Z",
+    "updatedAt": "2026-07-31T05:34:10.816Z"
+  },
+  {
+    "_id": "6a6c33d2ed05ba606090fafd",
+    "number": "B-201",
+    "block": "B Block",
+    "type": "AC",
+    "capacity": 1,
+    "occupiedBeds": 0,
+    "occupants": [],
+    "status": "available",
+    "__v": 0,
+    "createdAt": "2026-07-31T05:34:10.816Z",
+    "updatedAt": "2026-07-31T05:34:10.816Z"
+  },
+  {
+    "_id": "6a6c33d2ed05ba606090fafe",
+    "number": "B-202",
+    "block": "B Block",
+    "type": "Non-AC",
+    "capacity": 3,
+    "occupiedBeds": 0,
+    "occupants": [],
+    "status": "available",
+    "__v": 0,
+    "createdAt": "2026-07-31T05:34:10.816Z",
+    "updatedAt": "2026-07-31T05:34:10.816Z"
+  }
+]

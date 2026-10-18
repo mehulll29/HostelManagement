@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "6a6c33d2ed05ba606090faf5",
+    "fullName": "System Administrator",
+    "email": "admin@hostelhub.com",
+    "password": "$2a$10$r3do7GNwvtImVXwitLjg6uaRuzh6jWenGcdObfQ/28gowMRxgeGvm",
+    "role": "admin",
+    "phone": "+919876543210",
+    "rollNumber": "",
+    "collegeName": "Dharmsinh Desai University",
+    "course": "MCA",
+    "semester": "1",
+    "fatherName": "",
+    "fatherPhone": "",
+    "dateOfBirth": "",
+    "room": null,
+    "status": "active",
+    "createdAt": "2026-07-31T05:34:10.701Z",
+    "updatedAt": "2026-07-31T05:34:10.701Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a6c33d2ed05ba606090fb01",
+    "fullName": "Mehul Patel",
+    "email": "mehul@example.com",
+    "password": "$2a$10$rajvsPonkZpO2csYFzECJOELce.jTRm0aInHjsDMPGiY0gHBfYZ/6",
+    "role": "student",
+    "phone": "+919876543210",
+    "rollNumber": "MCA055",
+    "collegeName": "Dharmsinh Desai University",
+    "course": "MCA",
+    "semester": "6",
+    "fatherName": "Hasmukh Patel",
+    "fatherPhone": "+919876543213",
+    "dateOfBirth": "",
+    "room": "6a6c33d2ed05ba606090fafb",
+    "status": "active",
+    "createdAt": "2026-07-31T05:34:10.825Z",
+    "updatedAt": "2026-07-31T05:34:10.825Z",
+    "__v": 0
+  }
+]
